@@ -1,5 +1,5 @@
-function compraAlert(){
-  alert("Gracias por su compra")
+function compraAlert() {
+  alert("Gracias por su compra !");
 }
 
 let botonComprar = document.getElementById("boton-comprar");
