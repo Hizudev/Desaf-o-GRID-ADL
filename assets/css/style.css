@@ -41,7 +41,7 @@ header {
   display: flex;
   align-items: center;
   background-image: url("../imgs/header.png");
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   border: solid black 1px;
   font-family: "Nabla", cursive;
@@ -123,7 +123,7 @@ footer {
   align-items: center;
   background-image: url(../imgs/header.png);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   font-family: "Nabla", cursive;
   font-size: x-large;
   text-align: center;
