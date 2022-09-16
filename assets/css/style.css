@@ -5,66 +5,72 @@ html {
   font-family: "Sen", sans-serif;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "menu main main"
+    "footer footer footer";
+}
+
+p {
+  font-size: large;
+}
+
+a {
+  color: white;
+  font-size: large;
+  margin: 0.5em;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #583c60;
+}
+
+header i,
+footer i {
+  color: #ff8525;
+  padding-left: 0.5em;
+}
+
+/* HEADER */
+
 header {
   grid-area: header;
+  display: flex;
+  align-items: center;
   background-image: url("../imgs/header.png");
   background-position: center;
   background-size: cover;
-  color: #fb4b5b;
   border: solid black 1px;
-  font-family: 'Nabla', cursive;
+  font-family: "Nabla", cursive;
   padding-left: 2em;
-}
-
-main {
-  grid-area: main;
-  background-image: linear-gradient(120deg, #14254b 0%, #fb4657 100%);
-  border-right: solid black 1px;
-}
-
-p{
-  font-size: large;
 }
 
 /* MENU */
 
 menu {
   grid-area: menu;
-  margin: 0;
-  color: white;
   background-image: linear-gradient(to top, #583c60 0%, #14254b 100%);
-  border-left: solid black 1px;
-  border-right: solid black 1px;
-}
-
-a {
-  color: white;
-  font-size: large;
-  margin: 0.5em
-}
-
-a:hover{
-  color: #583c60;
-}
-
-.menu-box {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  color: white;
+  border-left: solid black 1px;
+  border-right: solid black 1px;
 }
 
 .menu-box h2 {
   font-size: xx-large;
 }
 
-/* GRID */
+/* MAIN - CARTA DE PRODUCTOS */
 
-.grid-container {
-  display: grid;
-  height: 100vh;
-  grid-template-areas:
-    "header header header"
-    "menu main main"
-    "footer footer footer";
+main {
+  grid-area: main;
+  background-image: linear-gradient(120deg, #14254b 0%, #fb4657 100%);
+  border-right: solid black 1px;
 }
 
 .grid-container2 {
@@ -74,21 +80,24 @@ a:hover{
   align-items: center;
 }
 
-/* CARTAS DE PRODUCTOS */
-
 .card-box {
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   border: solid 1px black;
-  background-color: white;
+  background-color: #e3e3e3;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1em;
 }
 
+.card-box img {
+  border-bottom: solid 1px black;
+  width: 330px;
+}
+
 /* BOTONES */
 
-button{
+button {
   background-color: #14254b;
   color: white;
   margin-top: 1em;
@@ -102,17 +111,20 @@ button:hover {
 }
 
 button:focus {
-  color: #fc9853;
+  color: #ff8525;
 }
 
 /* FOOTER */
 
 footer {
   grid-area: footer;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  align-items: center;
   background-image: url(../imgs/header.png);
   background-size: cover;
   background-position: bottom;
-  font-family: 'Nabla', cursive;
+  font-family: "Nabla", cursive;
   font-size: x-large;
   text-align: center;
   border: solid black 1px;
