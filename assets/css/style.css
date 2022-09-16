@@ -1,0 +1,58 @@
+/* GENERALES */
+
+html{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p{
+    margin: 0;
+}
+
+header{
+    grid-area: header;
+    background-color: aqua;
+}
+
+menu{
+    grid-area: menu;
+    margin: 0;
+    background-color: blue;
+}
+
+main{
+    grid-area: main;
+    background-color: brown;
+}
+
+footer{
+    grid-area: footer;
+    background-color: blueviolet;
+}
+
+/* GRID */
+
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "header header header"
+    "menu main main"
+    "footer footer footer";
+}
+
+.grid-container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+/* CARTAS DE PRODUCTOS */
+
+.card-box{
+    border: solid 1px black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
