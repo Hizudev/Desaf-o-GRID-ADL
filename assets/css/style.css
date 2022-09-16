@@ -1,58 +1,119 @@
 /* GENERALES */
 
-html{
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
+  font-family: "Sen", sans-serif;
 }
 
-h1, h2, h3, p{
-    margin: 0;
+header {
+  grid-area: header;
+  background-image: url("../imgs/header.png");
+  background-position: center;
+  background-size: cover;
+  color: #fb4b5b;
+  border: solid black 1px;
+  font-family: 'Nabla', cursive;
+  padding-left: 2em;
 }
 
-header{
-    grid-area: header;
-    background-color: aqua;
+main {
+  grid-area: main;
+  background-image: linear-gradient(120deg, #14254b 0%, #fb4657 100%);
+  border-right: solid black 1px;
 }
 
-menu{
-    grid-area: menu;
-    margin: 0;
-    background-color: blue;
+p{
+  font-size: large;
 }
 
-main{
-    grid-area: main;
-    background-color: brown;
+/* MENU */
+
+menu {
+  grid-area: menu;
+  margin: 0;
+  color: white;
+  background-image: linear-gradient(to top, #583c60 0%, #14254b 100%);
+  border-left: solid black 1px;
+  border-right: solid black 1px;
 }
 
-footer{
-    grid-area: footer;
-    background-color: blueviolet;
+a {
+  color: white;
+  font-size: large;
+  margin: 0.5em
+}
+
+a:hover{
+  color: #583c60;
+}
+
+.menu-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-box h2 {
+  font-size: xx-large;
 }
 
 /* GRID */
 
-.grid-container{
-    display: grid;
-    height: 100vh;
-    grid-template-areas: 
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
     "header header header"
     "menu main main"
     "footer footer footer";
 }
 
-.grid-container2{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
 /* CARTAS DE PRODUCTOS */
 
-.card-box{
-    border: solid 1px black;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card-box {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+  border: solid 1px black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+}
+
+/* BOTONES */
+
+button{
+  background-color: #14254b;
+  color: white;
+  margin-top: 1em;
+  padding: 0.5em;
+  border-radius: 0;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 50%;
+}
+
+button:focus {
+  color: #fc9853;
+}
+
+/* FOOTER */
+
+footer {
+  grid-area: footer;
+  background-image: url(../imgs/header.png);
+  background-size: cover;
+  background-position: bottom;
+  font-family: 'Nabla', cursive;
+  font-size: x-large;
+  text-align: center;
+  border: solid black 1px;
 }
