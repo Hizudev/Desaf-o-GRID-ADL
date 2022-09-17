@@ -8,9 +8,9 @@ html {
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header header header"
-    "menu main main"
-    "footer footer footer";
+    "header header header header header header header"
+    "menu main main main main main main"
+    "footer footer footer footer footer footer footer";
 }
 
 p {
@@ -63,6 +63,7 @@ menu {
 
 .menu-box h2 {
   font-size: xx-large;
+  padding-right: 1em;
 }
 
 /* MAIN - CARTA DE PRODUCTOS */
@@ -75,7 +76,7 @@ main {
 
 .grid-container2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
   justify-items: center;
   align-items: center;
 }
